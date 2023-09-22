@@ -1,0 +1,12 @@
+.mainHeader{
+  height: 150px;
+  background-image: url("../../img/wallpaperflare.com_wallpaper.jpg");
+  display: flex;
+  align-items: center;
+}
+
+.mainHeader h1{
+  color: #f1ece2;
+  margin-left: 50px;
+
+}
