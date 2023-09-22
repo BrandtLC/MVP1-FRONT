@@ -7,7 +7,7 @@ body {
 
 .Main {
   display: flex;
-  height: calc(100vh - 150px);
+  min-height: calc(100vh - 150px);
   width: 100%;
 }
 
@@ -58,4 +58,11 @@ form {
 form button {
   height: 50px;
 }
+
+.button-table {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
 

@@ -38,15 +38,19 @@ export default function Clientes() {
 
 
         <div>
-        <ClientesList getClientes = {clientes}/>
-        {selectedRow && (
-          <button
-          type="button"
-          onClick={() => deleteUser()}
-          >Delete</button>
-          
-        )}
+          <ClientesList getClientes = {clientes}/>
 
+          <div className="button-table">
+            {selectedRow && (
+              <button
+              type="button"
+              onClick={() => deleteUser()}
+              >Delete</button>
+
+            )}
+
+          </div>
+          
         </div>
 
       </section>

@@ -132,40 +132,43 @@ export default function Livros() {
 
           <LivrosList getLivros = {livrosFiltrados}/>
           {(selectedRow && selectedLivro) && (
-            <>
-            <button
-            type="button"
-            onClick={() => locarDevolver()}
-            disabled={!selectedLivro.locador ? disableLocar : false}>
-              {!selectedLivro.locador ? "Locar" : "Devolver"}
-            </button>
+            <div className="button-table">
+              <div className="locar-options">
+              <button
+              type="button"
+              onClick={() => locarDevolver()}
+              disabled={!selectedLivro.locador ? disableLocar : false}>
+                {!selectedLivro.locador ? "Locar" : "Devolver"}
+              </button>
 
-            {!selectedLivro.locador && (
-              <>
-                <label htmlFor="cliente">Cliente</label>
-                <select
-                name="cliente"
-                id="cliente"
-                value={selectedClient}
-                onChange={(e) =>setSelectedClient(e.target.value)}
-                >
-                  <option></option>
-                  {clientes.map((c) => (
-                  <option value={c.id} key={c.id}>{c.nome} {c.sobrenome}({c.cpf})</option>
-              ))}
-            
-            </select>
+              {!selectedLivro.locador && (
+                <>
+                  <label htmlFor="cliente">Cliente</label>
+                  <select
+                  name="cliente"
+                  id="cliente"
+                  value={selectedClient}
+                  onChange={(e) =>setSelectedClient(e.target.value)}
+                  >
+                    <option></option>
+                    {clientes.map((c) => (
+                    <option value={c.id} key={c.id}>{c.nome} {c.sobrenome}({c.cpf})</option>
+                ))}
 
-              </>
-            )}
+              </select>
 
-            <button
-            type="button"
-            onClick={() => deleteLivro()}
-            >
-              Delete
-            </button>
-            </>
+                </>
+              )}
+
+              </div>
+
+              <button
+              type="button"
+              onClick={() => deleteLivro()}
+              >
+                Delete
+              </button>
+            </div>
           )}
 
 
